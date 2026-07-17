@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnectSummit-Contact</title>
+    <title>AfriConnectSummit-Contact </title>
 <!-- Bootstrap Icon via CDN  : le lien --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <!-- Votre feuille de style personnelle --> 
@@ -11,6 +11,246 @@
 </head>
 <body>
 <!-- Le contenu de la page sera ajoute ici --> 
+ <header>
+        <nav>
+            <!-- le logo de mon site -->
+             <div>
+             <a href="index.html"><h2>AfriConnectSummit</h2></a>
+            </div>
+            <!-- menu de mon site avec mes 4 pages  -->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+                <li><a href="contact.html">Inscription & contact</a></li>
+            </ul>
+            <!-- controle à droite,thème et hamburger -->
+             <div>
+                <button>
+                    <i></i>
+                </button>
+                <button>
+                    <i></i>
+                </button>
+             </div>
+        </nav>
+        
+    </header> 
+    <main>
+        <!-- hero interne  baniére avec fil d'ariane-->
+        <section>
+            <div>
+                <nav>
+                    <a href="index.html">Accueil</a>&gt; <span>Contact</span>
+                </nav>
+                <h1>Inscription & Contact</h1>
+                <p>Rejoignez l'événement technologique majeur de l'année 2026.</p>
+            </div>
+        </section>
+        <!-- section formulaire  et information-->
+        <section>
+            <div>
+                <!-- collone gauche de la formulaire -->
+                 <div>
+                    <h2>Formulaire D'Inscription</h2>
+                    <form>
+                        <!-- Champ non complet -->
+                         <div>
+                            <label for="fullname">Nom Complet *</label>
+                            <input type="text" id="fullname" placeholder="Ex: Amina Diop" required>
+                            <!-- zone pour le message d'erreur -->
+                             <span></span>
+                         </div>
+                         <!-- Champ Email -->
+                          <div>
+                            <label for="Email">Adresse Mail *</label>
+                            <input type="email" id="Email" placeholder="Ex: amina@gmail.com" required>
+                            <span></span>
+                          </div>
+                          <!-- Champ Téléphone -->
+                           <div>
+                            <label for="phone">Numéro de téléphone *</label>
+                            <input type="tel" id="phone" placeholder="Ex:771234567" required>
+                            <span></span>
+                          </div>
+                          <!-- Champ Type de participation-->
+                           <div>
+                            <label for="participation">Type de participation *</label>
+                            <select  id="participation" required>
+                                <option value="">Choisir une option...</option>
+                                <option value="">Standard (Présentiel)</option>
+                                <option value="">Accés VIP</option>
+                                <option value="">Etudiant</option>
+                                <option value="">En ligne uniquement</option>
+                            </select>
+                            <span></span>
+                          </div>
+                          <!-- Champ pays africain (10 pays au choix) -->
+                           <div>
+                            <label for="country">Pays d'origine *</label>
+                            <select  id="country" required>
+                                <option value="" disabled selected>Choisir un pays</option>
+                                <option value="sénégal">Sénégal</option>
+                                <option value="côte d'ivoire">Côte d'ivoire</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="nigéria">Nigéria</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="guinée">Guinée</option>
+                                <option value="cameroun">Cameroun</option>
+                                <option value="maroc">Maroc</option>
+                                <option value="tunisie">Tunisie</option>
+                                <option value="afrique du sud">Afrique du sud</option>
+                            </select>
+                            <span></span>
+                           </div>
+                           <!-- Champ message/motivation -->
+                            <div>
+                                <label for="message">Message ou Motivation *</label>
+                                <textarea placeholder="Dites nous ce qui vous motive (min. 20 caractères)..." id="message"></textarea>
+                                <span></span>
+                            </div>
+                            <!-- message de succès -->
+                             <div>
+                                <i></i>Inscription validée avec succés !
+                             </div>
+                             <!-- bouton d'envoie -->
+                              <button type="submit">S'inscrire Maintenant</button>
+                    </form>
+                 </div>
+                 <!-- collone droite , les informations pratiques -->
+                  <div>
+                    <h2>Informations Pratiques</h2>
+                    <div>
+                        <i></i>
+                        <div>
+                            <h3>Dates du sommet</h3>
+                            <p>Du 15 au 17 Novembre 2026</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i></i>
+                        <div>
+                            <h3>Lieu de l'événement</h3>
+                            <p>Centre de conférence, Dakar, Sénégal</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i></i>
+                        <div>
+                            <h3>Contactez-Nous</h3>
+                            <p>contact@africonnectsummit</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i></i>
+                        <div>
+                            <h3>Infoline</h3>
+                            <p>+221 33 800 00 00</p>
+                        </div>
+                    </div>
+
+                  </div>
+            </div>
+        </section>
+        <!-- section FAQ en accordéon -->
+         <section>
+            <div>
+                <h2>Foire Aux Questions (FAQ) </h2>
+                <div>
+                    <!-- Question1 -->
+                     <div>
+                        <input type="checkbox" id="faq1">
+                        <label for="faq1">
+                            L'événement est-il accessible en ligne ?
+                            <i></i>
+                        </label>
+                        <div>
+                            <p>Oui, tout les conférences de l'Amphithéâtre Kélifa seront diffusées en direct pour les inscrits "En ligne"</p>
+                        </div>
+                     </div>
+                     <!-- Question2 -->
+                      <div>
+                        <input type="checkbox" id="faq2">
+                        <label for="faq2">
+                            Comment puis-je recupérer mon badge ?
+                            <i></i>
+                        </label>
+                        <div>
+                            <p>Les badges pourront être récupérés à l'acceuil du Centre de Conférence dés le 14 Novembre sur présentation de votre confirmation.</p>
+                        </div>
+                     </div>
+                     <!-- Question3 -->
+                     <div>
+                        <input type="checkbox" id="faq3">
+                        <label for="faq3">
+                            Y a-t-il des tarifs réduits pour les étudiants  ?
+                            <i></i>
+                        </label>
+                        <div>
+                            <p>Tout à fait ! En sélectionnant "Etudiant" et en présentant justificatif valide, vous bénéficiez de 50% de réduction.</p>
+                        </div>
+                     </div>
+                     <!-- Question4 -->
+                     <div>
+                        <input type="checkbox" id="faq4">
+                        <label for="faq4">
+                            Puis-je modifier ma participation plus tard ?
+                            <i></i>
+                        </label>
+                        <div>
+                            <p>Oui, Vous pouvez modifier vos informations en envoyant un email au support avant le 1er novembre 2026.</p>
+                        </div>
+                     </div>
+                     <!-- Question5 -->
+                     <div>
+                        <input type="checkbox" id="faq5">
+                        <label for="faq5">
+                             les repas sont -ils compris dans l'inscription?
+                            <i></i>
+                        </label>
+                        <div>
+                            <p>Les pauses café et déjeuners sont inclus por les badges VIP et Standard.</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+         </section>
+         <!-- carte google maps -->
+          <section>
+            <div>
+                <h2>Où nous trouver ?</h2>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.548261954973!2d-17.4476798250743!3d14.681559085814467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec17317da2aeaaf%3A0xe0250c32b6f58c18!2sVille%20de%20Dakar!5e0!3m2!1sfr!2ssn!4v1784126316068!5m2!1sfr!2ssn"  width="800" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+
+                    </iframe>
+                </div>
+            </div>
+          </section>
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <h3>AfriConnect Summit</h3>
+                <p>La vitrine technologique majeure de l'année 2026.</p>
+            </div>
+            <div>
+                <h3>Média sociaux</h3>
+                <div>
+                    <a href="#" aria-label="X (Twitter)"><i></i></a>
+                    <a href="#" aria-label="Linkedin"><i></i></a>
+                    <a href="#" aria-label="Instagram"><i></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Navigation Rapide</h3>
+                <a href="#"><i></i>Retour en haut</a>
+            </div>
+        </div>
+        <div>
+            <p>&copy;<span></span>AfriConnect Summit. Tout droits réservés.</p>
+        </div>
+    </footer>
 <!-- Votre script JavaScript --> 
 <script src="js/main.js"></script> 
 </body>
