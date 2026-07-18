@@ -7,31 +7,31 @@
 <!-- Bootstrap Icon via CDN  : le lien --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css\style.css">
 </head>
 <body>
 <!-- Le contenu de la page sera ajoute ici --> 
  <!-- le navbar de mon site header -->
- <header>
-        <nav>
+ <header class="main-header">
+        <nav class="nav-container">
             <!-- le logo de mon site -->
-             <div>
+             <div class="logo">
              <a href="index.html"><h2>AfriConnectSummit</h2></a>
             </div>
             <!-- menu de mon site avec mes 4 pages  -->
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="programme.html">Programme</a></li>
                 <li><a href="intervenants.html">Intervenants</a></li>
                 <li><a href="contact.html">Inscription & contact</a></li>
             </ul>
             <!-- controle à droite,thème et hamburger -->
-             <div>
-                <button aria-label="Changer de thème">
-                    <i></i>
+             <div class="nav-controls">
+                <button aria-label="Changer de thème" class="btn-theme">
+                    <i class="bi bi-sun"></i>
                 </button>
-                <button aria-label="Menu Mobile">
-                    <i></i>
+                <button aria-label="Menu Mobile" class="btn-burger">
+                    <i class="bi bi-list"></i>
                 </button>
              </div>
         </nav>
@@ -40,66 +40,66 @@
      <!-- main -->
     <main>
         <!-- le section hero ,ungrend titre blanc, fond très sombre, accents néons -->
-         <section>
-            <div>
-                <div>15 - 18 Novembre 2026 // Dakar, Sénégal</div>
-                <h1>Le plus grand sommet technologique d'Afrique.</h1>
-                <p>Là où l'innovation rencontre les futurs talents du  continent.</p>
+         <section class="internal-hero">
+            <div class="container hero-content">
+                <div class="hero-date"> <i class="bi bi-calendar3"></i>15 - 18 Novembre 2026 // Dakar, Sénégal</div>
+                <h1 class="hero-title">Le plus grand sommet technologique d'Afrique.</h1>
+                <p class="hero-subtitle">Là où l'innovation rencontre les futurs talents du  continent.</p>
                 <!-- les deux boutons cta -->
-                 <div>
-                    <a href="contact.html">Prendre un billet</a>
-                    <a href="programme.html">En savoir plus</a>
+                 <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary">Prendre un billet</a>
+                    <a href="programme.html" class="btn-secondary">En savoir plus</a>
                  </div>
                  <!-- le compte à rebours épuré -->
-                  <div>
-                    <div><span>00</span><p>Jours</p></div>
-                    <div><span>00</span><p>Heures</p></div>
-                    <div><span>00</span><p>Minutes</p></div>
-                    <div><span>00</span><p>Secondes</p></div>
+                  <div class="countdown-container">
+                    <div class="countdown-item"><span id="days">00</span><p>Jours</p></div>
+                    <div class="countdown-item"><span id="hours">00</span><p>Heures</p></div>
+                    <div class="countdown-item"><span id="minutes">00</span><p>Minutes</p></div>
+                    <div class="countdown-item"><span id="seconds">00</span><p>Secondes</p></div>
                 </div>
             </div>
          </section>
          <!-- les chiffres clés ,bandeau statistiques massives -  grid -->
-          <section>
-            <div>
-                <h2>Le Sommet en chiffres</h2>
-                <div>
-                    <div>
-                        <div>+1500</div>
-                        <div>Participants</div>
+          <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Le Sommet en chiffres</h2>
+                <div class="stats-grid">
+                    <div  class="stat-card">
+                        <div class="stat-number">+1500</div>
+                        <div class="stat-label">Participants</div>
                     </div>
-                    <div>
-                        <div>30</div>
-                        <div>Intervenants</div>
+                    <div  class="stat-card">
+                        <div class="stat-number">30</div>
+                        <div  class="stat-label">Intervenants</div>
                     </div>
-                    <div>
-                        <div>3</div>
-                        <div>Jours de Conférences</div>
+                    <div  class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div  class="stat-label">Jours de Conférences</div>
                     </div>
-                    <div>
-                        <div>15</div>
-                        <div>Pays Représentés</div>
+                    <div  class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Pays Représentés</div>
                     </div>
                 </div>
             </div>
           </section>
           <!-- pourquoi participer, mise en avant des arguments  -->
-          <section>
-            <div>
-                <h2>Pourquoi nous rejoindre ?</h2>
-                <div>
-                    <article>
-                        <div><i></i></div>
+          <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Pourquoi nous rejoindre ?</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-people"></i></div>
                         <h3>Networking mondial</h3>
                         <p>Rencontez des investisseurs internationnaux et les leaders d'opinion de la tech.</p>
                     </article>
-                    <article>
-                        <div><i></i></div>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
                         <h3>Technologies de pointe </h3>
                         <p>Explorez les avancées majeures en IA, Webs et solutions durables pour l'Afrique.</p>
                     </article>
-                    <article>
-                        <div><i></i></div>
+                    <article class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-trophy"></i></div>
                         <h3>Opportinutés</h3>
                         <p>Accédez à des ateliers de recrutement et des compétitions de pitch exclusives.</p>
                     </article>
@@ -107,103 +107,106 @@
             </div>
           </section>
           <!-- les intervenants vedettes,les grilles de portraits -->
-           <section>
-            <div>
-                <h2>Intervenants Vedettes</h2>
-                <div>
+           <section class="feature-speakers">
+            <div class="container">
+                <h2 class="section-title">Intervenants Vedettes</h2>
+                <div class="speakers-grid">
                     <!-- Conférencier1 -->
-                     <div>
-                        <div>
+                     <div class="speakers-card">
+                        <div class="speakers-img-wrapper">
                             <img src="../AidaSoce-Kane-AfriConnectSummit/images/alex-starnes-PK_t0Lrh7MM-unsplash.jpg" alt="Portrait de Amina Diop, Experte en IA">
                         </div>
-                        <div>
+                        <div class="speakers-info">
                             <h3>Amina Diop</h3>
                             <p>Experte en IA (Senegal)</p>
                         </div>
                      </div>
                      <!-- Conférencier2 -->
-                      <div>
-                        <div>
+                      <div class="speakers-card">
+                        <div class="speakers-img-wrapper">
                             <img src="../AidaSoce-Kane-AfriConnectSummit/images/samson-balogun-KYLwJKE3Kz0-unsplash.jpg" alt="Owusu Kwamé">
                         </div>
-                        <div>
+                        <div class="speakers-info">
                             <h3>Kwame Mensah</h3>
                             <p>Developpeur Cloud (Ghana) </p>
                         </div>
                       </div>
                       <!-- Conférencier3 -->
-                       <div>
-                        <div>
+                       <div class="speakers-card">
+                        <div class="speakers-img-wrapper">
                             <img src="../AidaSoce-Kane-AfriConnectSummit/images/Fatou-Niang.jpg" alt="Fatou Ndiang">
                         </div>
-                        <div>
+                        <div class="speakers-info">
                             <h3>Fatou Ndiang</h3>
                             <p>investisseuses VC (cotê d' ivoire)</p>
                         </div>
                        </div>
                        <!-- Conférencier4 -->
-                        <div>
+                        <div class="speakers-card">
+                        <div class="speakers-img-wrapper">
                             <img src="../AidaSoce-Kane-AfriConnectSummit/images/homme.jpg" alt="Danliti Abdou">
                         </div>
-                        <div>
+                        <div class="speakers-info">
                             <h3>Danliti Abdou</h3>
                             <p>Directeur Innovation (Nigéria) </p>
                         </div>
+                    </div>
                 </div>
             </div>
             <!-- le bouton exigé -->
-             <div>
-                <a href="intervenants.html">Découvrir tous les visages de 2026</a>
+             <div class="more-speakers-action">
+                <a href="intervenants.html" class="btn-primary">Découvrir tous les visages de 2026</a>
              </div>
              </section>
-             <section>
-             <div>
-                <h2>Nos partenaires mondiaux</h2>
+             <!-- les partenaires -->
+             <section class="partners-section">
+             <div class="container">
+                <h2 class="section-title">Nos partenaires mondiaux</h2>
                 <!-- Piste Or -->
-                 <div>
-                    <div>
-                        <div>Logo sponsor Or 1</div>
-                        <div>Logo Sponsor Or 2</div>
+                 <div class="partners-tier gold-tier">
+                    <div class="partners-logos">
+                        <div class="partners-logo-box">Logo sponsor Or 1</div>
+                        <div class="partners-logo-box">Logo Sponsor Or 2</div>
                     </div>
                  </div>
                  <!-- Piste Argent -->
-                  <div>
-                    <div>
-                        <div>Logo Argent 1</div>
-                        <div>Logo Argent 2</div>
-                        <div>Logo Argent 3</div>
+                  <div class="partners-tier silver-tier">
+                    <div class="partners-logos">
+                        <div class="partners-logo-box">Logo Argent 1</div>
+                        <div class="partners-logo-box">Logo Argent 2</div>
+                        <div class="partners-logo-box">Logo Argent 3</div>
                     </div>
                   </div>
                   <!-- Piste  Bronze -->
-                   <div>
-                    <div>
-                        <div>Logo Bronze 1</div>
+                   <div class="partners-tier bronze-tier">
+                    <div class="partners-logos">
+                        <div class="partners-logo-box">Logo Bronze 1</div>
                     </div>
                    </div>
              </div>
            </section>
     </main>
-
-    <footer>
-        <div>
-            <div>
+        <!-- pied de page -->
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
                 <h3>AfriConnect Summit</h3>
                 <p>La vitrine technologique majeure de l'année 2026.</p>
             </div>
-            <div>
+            <div class="footer-socials">
                 <h3>Média sociaux</h3>
-                <div>
-                    <a href="#" aria-label="X (Twitter)"><i></i></a>
-                    <a href="#" aria-label="Linkedin"><i></i></a>
-                    <a href="#" aria-label="Instagram"><i></i></a>
+                <div class="social-icons">
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
-            <div>
+            <div class="footer-nav">
                 <h3>Navigation rapide </h3>
-                <a href="#"><i></i>Retour en haut</a>
+                <a href="#"  class="back-to-top"><i class="bi bi-arrow-up-short"></i>Retour en haut</a>
             </div>
         </div>
-        <div>
+        <div class="footer-bottom">
             <p>&copy;<span></span>AfriConnect Summit. Tout droits réservés.</p>
         </div>
     </footer>

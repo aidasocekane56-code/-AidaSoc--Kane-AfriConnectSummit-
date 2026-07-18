@@ -7,59 +7,61 @@
 <!-- Bootstrap Icon via CDN  : le lien --> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css\style.css">
 </head>
 <body>
 <!-- Le contenu de la page sera ajoute ici --> 
- <header>
+ <header class="main-header">
         
-        <nav>
-             <div>
+        <nav class="nav-container">
+             <div class="logo">
              <a href="index.html"><h2>AfriConnectSummit</h2></a>
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="programme.html">Programme</a></li>
                 <li><a href="intervenants.html">Intervenants</a></li>
                 <li><a href="contact.html">Inscription & contact </a></li>
             </ul>
-        </nav>
-        <div>
-            <button>
-                <i></i>
+        
+        <!-- controle proprement dans le nav-container -->
+        <div class="nav-controls">
+            <button  aria-label="Changer de thème" class="btn-theme">
+                <i class="bi bi-sun"></i>
             </button>
-            <button>
-                <i></i>
+            <button aria-label="Menu Mobile" class="btn-burger">
+                <i class="bi bi-list"></i>
             </button>
         </div>
+    </nav>
     </header>
     <!-- Hero interne, banière pleine largeur avec fil d'ariane -->
     <main>
-        <section>
-            <div>
+        <section class="internal-hero">
+            <div class="container hero-content">
                 <!-- le fil d'ariane -->
-                 <nav>
+                 <nav aria-label="fil d'ariane" class="breadcrumb">
                     <a href="index.html">Accueil</a>&gt; <span>Programme</span>
                  </nav>
-                 <h1>Le Programme du Sommet</h1>
-                 <p>Découvrez les conférences, les panels et les ateliers phares de cette édition 2026.</p>
+                 <h1 class="hero-title">Le Programme du Sommet</h1>
+                 <p class="hero-subtitle">Découvrez les conférences, les panels et les ateliers phares de cette édition 2026.</p>
             </div>
         </section>
         <!-- section onglets pour trois jours -->
-        <section>
-            <div>
-                <h2>Planing du jour</h2>
+        <section class="schedule-section">
+            <div class="container">
+                <h2 class="section-title">Planing du jour</h2>
                 <!-- les boutons d'onglets pour le javascript -->
-                 <div>
-                    <button data-day="day1">Jour 1 - 15 Nov</button>
-                    <button data-day="day2">Jour 2 - 16 Nov</button>
-                    <button data-day="day3">Jour 3 - 17 Nov</button>
+                 <div class="tabs-container">
+                    <button class="tab-btn active" data-day="day1">Jour 1 - 15 Nov</button>
+                    <button class="tab-btn" data-day="day2">Jour 2 - 16 Nov</button>
+                    <button class="tab-btn" data-day="day3">Jour 3 - 17 Nov</button>
                  </div>
                  <!-- Contenu des onglets (tableaux html) -->
-                  <div>
+                  <div class="tabs-content">
                     <!-- tableu du jour1 -->
-                     <div>
-                        <table>
+                     <div id="day1" class="tab-panel active">
+                        <table class="schedule-table">
                             <thead>
                                 <tr>
                                     <th>Heures</th>
@@ -70,34 +72,34 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>09:00 - 10:00</td>
-                                    <td>Cérémonie d'ouverture & Discours d'acceuil</td>
-                                    <td>Comité d'organisation</td>
+                                    <td class="time-col">09:00 - 10:00</td>
+                                    <td class="session-col">Cérémonie d'ouverture & Discours d'acceuil</td>
+                                    <td class="speaker-col">Comité d'organisation</td>
                                     <td>Amphithéâtre Kélifa</td>
                                 </tr>
                                 <tr>
-                                    <td>10:15 - 11:30</td>
-                                    <td>L'essor de l'Intelligence Artificielle en Afrique</td>
-                                    <td>Amina Diop</td>
-                                    <td>Salle Galaxie (A)</td>
+                                    <td class="time-col">10:15 - 11:30</td>
+                                    <td class="session-col">L'essor de l'Intelligence Artificielle en Afrique</td>
+                                    <td class="speaker-col">Amina Diop</td>
+                                    <td class="room-col">Salle Galaxie (A)</td>
                                 </tr>
                                 <tr>
-                                    <td>11:45 - 13:00</td>
-                                    <td>Fintech : Révolutionner le paiement mobile</td>
-                                    <td>Kwame Mensah</td>
-                                    <td>Salle Innovation (B)</td>
+                                    <td class="time-col">11:45 - 13:00</td>
+                                    <td class="session-col">Fintech : Révolutionner le paiement mobile</td>
+                                    <td class="speaker-col">Kwame Mensah</td>
+                                    <td class="room-col">Salle Innovation (B)</td>
                                 </tr>
                                 <tr>
-                                    <td>14:30 - 16:00</td>
-                                    <td>Atelier Pratique : Introduction au Cloud de demain</td>
-                                    <td>Equipe Technique</td>
-                                    <td>Lab Tech 1</td>
+                                    <td class="time-col">14:30 - 16:00</td>
+                                    <td class="session-col">Atelier Pratique : Introduction au Cloud de demain</td>
+                                    <td class="speaker-col">Equipe Technique</td>
+                                    <td class="room-col">Lab Tech 1</td>
                                 </tr>
                                 <tr>
-                                    <td>16:15 - 17:30</td>
-                                    <td>Table ronde : Investir dans les talents locaux</td>
-                                    <td>Fatou Niang, Danliti Abdou</td>
-                                    <td>Amphithéâtre Kélifa</td>
+                                    <td class="time-col">16:15 - 17:30</td>
+                                    <td class="session-col">Table ronde : Investir dans les talents locaux</td>
+                                    <td class="speaker-col">Fatou Niang, Danliti Abdou</td>
+                                    <td class="room-col">Amphithéâtre Kélifa</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -115,41 +117,41 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>09 : 00 -  10:15</td>
-                                    <td>Cybersécurité : Protéger les infrastructures africaines</td>
-                                    <td>Mamadou sOw</td>
-                                    <td>Amphithéâtre Kélifa</td>
+                                    <td class="time-col">09 : 00 -  10:15</td>
+                                    <td class="session-col">Cybersécurité : Protéger les infrastructures africaines</td>
+                                    <td  class="speaker-col">Mamadou sOw</td>
+                                    <td class="room-col">Amphithéâtre Kélifa</td>
                                 </tr>
                                 <tr>
-                                    <td>10:30 - 12:00</td>
-                                    <td>Web3 et Blockchain: Au-delà de la spéculation</td>
-                                    <td>Fatou Niang</td>
-                                    <td>Salle Galaxie (A)</td>
+                                    <td class="time-col">10:30 - 12:00</td>
+                                    <td class="session-col">Web3 et Blockchain: Au-delà de la spéculation</td>
+                                    <td  class="speaker-col">Fatou Niang</td>
+                                    <td class="room-col">Salle Galaxie (A)</td>
                                 </tr>
                                 <tr>
-                                    <td>12:15 - 15:30</td>
-                                    <td>L'internet des objets (IoT) au services du l'agriculture</td>
-                                    <td>Danliti Abdou</td>
-                                    <td>Salle Innovation (B)</td>
+                                    <td class="time-col">12:15 - 15:30</td>
+                                    <td class="session-col">L'internet des objets (IoT) au services du l'agriculture</td>
+                                    <td  class="speaker-col">Danliti Abdou</td>
+                                    <td class="room-col">Salle Innovation (B)</td>
                                 </tr>
                                 <tr>
-                                    <td>15:00 - 16:30</td>
-                                    <td>Atelier : Concevoir des applications mobiles ultra-lègères</td>
-                                    <td>Experts Web</td>
-                                    <td>Lab Tech2</td>
+                                    <td class="time-col">15:00 - 16:30</td>
+                                    <td class="session-col">Atelier : Concevoir des applications mobiles ultra-lègères</td>
+                                    <td  class="speaker-col">Experts Web</td>
+                                    <td class="room-col">Lab Tech2</td>
                                 </tr>
                                 <tr>
-                                    <td>16:45 - 18:00</td>
-                                    <td>Panel: les femmes leaders de la tech Afrique</td>
-                                    <td>Amina diop, Invités</td>
-                                    <td>Amphithéâtre Kélifa</td>
+                                    <td class="time-col">16:45 - 18:00</td>
+                                    <td class="session-col">Panel: les femmes leaders de la tech Afrique</td>
+                                    <td  class="speaker-col">Amina diop, Invités</td>
+                                    <td class="room-col">Amphithéâtre Kélifa</td>
                                 </tr>
                             </tbody>
                         </table>
                      </div>
                      <!-- tableau jour 3 -->
-                     <div>
-                        <table>
+                     <div id="day3" class="tab-panel">
+                        <table class="schedule-table">
                             <thead>
                                 <tr>
                                     <th>Heures</th>
@@ -160,34 +162,34 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>09:00 - 11:00</td>
-                                    <td>Compétition de Pitch Startups (Finale)</td>
-                                    <td>Jury d'Investisseurs</td>
-                                    <td>Amphithéâtre Kélifa</td>
+                                    <td class="time-col">09:00 - 11:00</td>
+                                    <td class="session-col">Compétition de Pitch Startups (Finale)</td>
+                                    <td  class="speaker-col">Jury d'Investisseurs</td>
+                                    <td class="room-col">Amphithéâtre Kélifa</td>
                                 </tr>
                                 <tr>
-                                    <td>11:15 - 12:30</td>
-                                    <td>Énergies vertes et Green Tech</td>
-                                    <td>Kwame Mensah</td>
-                                    <td>Salle Galaxie (A)</td>
+                                    <td class="time-col">11:15 - 12:30</td>
+                                    <td class="session-col">Énergies vertes et Green Tech</td>
+                                    <td  class="speaker-col">Kwame Mensah</td>
+                                    <td class="room-col">Salle Galaxie (A)</td>
                                 </tr>
                                 <tr>
-                                    <td>14:00 - 15:15</td>
-                                    <td>Infrastructures Télécoms et couverture 5G</td>
-                                    <td>Danliti Abdou</td>
-                                    <td>Salle d'Innovation (B)</td>
+                                    <td class="time-col">14:00 - 15:15</td>
+                                    <td class="session-col">Infrastructures Télécoms et couverture 5G</td>
+                                    <td  class="speaker-col">Danliti Abdou</td>
+                                    <td class="room-col">Salle d'Innovation (B)</td>
                                 </tr>
                                 <tr>
-                                    <td>15:30 - 16:30</td>
-                                    <td>L'avenir du travail à distance et de la collaboration</td>
-                                    <td>Amina Diop</td>
-                                    <td>Lab Tech1</td>
+                                    <td class="time-col">15:30 - 16:30</td>
+                                    <td class="session-col">L'avenir du travail à distance et de la collaboration</td>
+                                    <td  class="speaker-col">Amina Diop</td>
+                                    <td class="room-col">Lab Tech1</td>
                                 </tr>
                                 <tr>
-                                    <td>16:45 - 18:00</td>
-                                    <td>Cérémonie de Clôture & Remise des Prix</td>
-                                    <td>Comité & Sponsors</td>
-                                    <td>Amphithéâtre Kélifa</td>
+                                    <td class="time-col">16:45 - 18:00</td>
+                                    <td class="session-col">Cérémonie de Clôture & Remise des Prix</td>
+                                    <td  class="speaker-col">Comité & Sponsors</td>
+                                    <td class="room-col">Amphithéâtre Kélifa</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -195,38 +197,38 @@
                   </div>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Les Grandes Thématiques de 2026</h2>
+        <section class="themes-section">
+            <div class="container">
+                <h2 class="section-title">Les Grandes Thématiques de 2026</h2>
                 <div>
                     <!-- la première thématique -->
-                    <article>
-                        <div>
-                            <i></i>
+                    <article class="themes-card">
+                        <div class="themes-icon-wrapper">
+                            <i class="bi bi-cpu"></i>
                         </div>
                         <h3>Intelligence Artificielle</h3>
                         <p>Plongez au coeur des algorithmeset des solutions intelligentes adaptées aux réalités du marché africain.</p>
                     </article>
                     <!-- la deuxième thématique -->
-                     <article>
-                        <div>
-                            <i></i>
+                     <article class="theme-card">
+                        <div class="themes-icon-wrapper">
+                            <i class="bi bi-shield-lock"></i>
                         </div>
                         <h3>Cybersécurité & Données</h3>
                         <p>Découvrez comment protéger les écosystémes numériques face aux menaces émergentes de notre ère.</p>
                      </article>
                      <!-- la troisième thématique  -->
-                      <article>
-                        <div>
-                            <i></i>
+                      <article class="theme-card">
+                        <div class="themes-icon-wrapper">
+                            <i class="bi bi-credit-card-2-front"></i>
                         </div>
                         <h3>Fintech Web</h3>
                         <p>Analisez l'évolution des transactions financières décentralisées et la souveraineté économique numérique.</p>
                       </article>
                       <!-- la quatrième thématique -->
-                       <article>
-                        <div>
-                            <i></i>
+                       <article class="theme-card">
+                        <div class="themes-icon-wrapper">
+                            <i class="bi bi-globe-americas"></i>
                         </div>
                         <h3>Inclusion & Éco-Tech</h3>
                         <p>Développez une technologie repectueuse de l'environnement et accessible à toutes les communautés.</p>
@@ -235,26 +237,26 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <div>
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
                 <h3>AfriConnectSummit</h3>
                 <p>La vitrine Majeur de l'année 2026.</p>
             </div>
-            <div>
+            <div class="footer-socials">
                 <h3>Médias Sociaux</h3>
                 <div>
-                    <a href="#" aria-label="X(Twitter)"><i></i></a>
-                    <a href="#" aria-label="Linkedin"><i></i></a>
-                    <a href="#" aria-label="Instagram"><i></i></a>
+                    <a href="#" aria-label="X(Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
-            <div>
+            <div class="footer-nav">
                 <h3>Navigation Rapide</h3>
                 <a href="#"><i></i>Retour en haut</a>
             </div>
         </div>
-        <div>
+        <div class="footer-bottom">
             <p>&copy; <span></span>AfriConnect Summit. Tout droits réservés.</p>
         </div>
     </footer>

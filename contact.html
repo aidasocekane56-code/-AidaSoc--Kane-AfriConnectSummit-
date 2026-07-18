@@ -11,26 +11,26 @@
 </head>
 <body>
 <!-- Le contenu de la page sera ajoute ici --> 
- <header>
-        <nav>
+ <header class="main-header">
+        <nav class="nav-container">
             <!-- le logo de mon site -->
-             <div>
+             <div class="logo">
              <a href="index.html"><h2>AfriConnectSummit</h2></a>
             </div>
             <!-- menu de mon site avec mes 4 pages  -->
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="programme.html">Programme</a></li>
                 <li><a href="intervenants.html">Intervenants</a></li>
                 <li><a href="contact.html">Inscription & contact</a></li>
             </ul>
             <!-- controle à droite,thème et hamburger -->
-             <div>
-                <button>
-                    <i></i>
+             <div class="nav-controls">
+                <button  aria-label="Changer de thème" class="btn-theme">
+                    <i class="bi bi-sun"></i>
                 </button>
-                <button>
-                    <i></i>
+                <button aria-label="Menu mobile" class="btn-burger">
+                    <i class="bi bi-list"></i>
                 </button>
              </div>
         </nav>
@@ -38,43 +38,43 @@
     </header> 
     <main>
         <!-- hero interne  baniére avec fil d'ariane-->
-        <section>
-            <div>
-                <nav>
+        <section class="internal-hero">
+            <div class="container hero-content">
+                <nav class="breadcrumb">
                     <a href="index.html">Accueil</a>&gt; <span>Contact</span>
                 </nav>
-                <h1>Inscription & Contact</h1>
-                <p>Rejoignez l'événement technologique majeur de l'année 2026.</p>
+                <h1 class="hero-title">Inscription & Contact</h1>
+                <p class="hero-subtitle">Rejoignez l'événement technologique majeur de l'année 2026.</p>
             </div>
         </section>
         <!-- section formulaire  et information-->
-        <section>
-            <div>
+        <section class="contact-section">
+            <div class="container contact-grid">
                 <!-- collone gauche de la formulaire -->
-                 <div>
-                    <h2>Formulaire D'Inscription</h2>
-                    <form>
+                 <div class="form-wrapper">
+                    <h2 class="form-title">Formulaire D'Inscription</h2>
+                    <form id="registration-form">
                         <!-- Champ non complet -->
-                         <div>
+                         <div class="form-group">
                             <label for="fullname">Nom Complet *</label>
                             <input type="text" id="fullname" placeholder="Ex: Amina Diop" required>
                             <!-- zone pour le message d'erreur -->
-                             <span></span>
+                             <span class="error-message"></span>
                          </div>
                          <!-- Champ Email -->
-                          <div>
+                          <div class="form-group">
                             <label for="Email">Adresse Mail *</label>
                             <input type="email" id="Email" placeholder="Ex: amina@gmail.com" required>
-                            <span></span>
+                            <span class="error-message"></span>
                           </div>
                           <!-- Champ Téléphone -->
-                           <div>
+                           <div class="form-group">
                             <label for="phone">Numéro de téléphone *</label>
                             <input type="tel" id="phone" placeholder="Ex:771234567" required>
-                            <span></span>
+                            <span class="error-message"></span>
                           </div>
                           <!-- Champ Type de participation-->
-                           <div>
+                           <div class="form-group">
                             <label for="participation">Type de participation *</label>
                             <select  id="participation" required>
                                 <option value="">Choisir une option...</option>
@@ -101,49 +101,49 @@
                                 <option value="tunisie">Tunisie</option>
                                 <option value="afrique du sud">Afrique du sud</option>
                             </select>
-                            <span></span>
+                            <span class="error-message"></span>
                            </div>
                            <!-- Champ message/motivation -->
-                            <div>
+                            <div class="form-group">
                                 <label for="message">Message ou Motivation *</label>
                                 <textarea placeholder="Dites nous ce qui vous motive (min. 20 caractères)..." id="message"></textarea>
-                                <span></span>
+                                <span class="error-message"></span>
                             </div>
                             <!-- message de succès -->
-                             <div>
-                                <i></i>Inscription validée avec succés !
+                             <div class="success-banner">
+                                <i class="bi bi-check-circle-fill"></i>Inscription validée avec succés !
                              </div>
                              <!-- bouton d'envoie -->
-                              <button type="submit">S'inscrire Maintenant</button>
+                              <button type="submit" class="btn-submit">S'inscrire Maintenant</button>
                     </form>
                  </div>
                  <!-- collone droite , les informations pratiques -->
-                  <div>
-                    <h2>Informations Pratiques</h2>
-                    <div>
-                        <i></i>
-                        <div>
+                  <div class="info-wrapper">
+                    <h2 class="info-title">Informations Pratiques</h2>
+                    <div class="info-card">
+                        <i class="bi bi-calendar-event"></i>
+                        <div class="info-body">
                             <h3>Dates du sommet</h3>
                             <p>Du 15 au 17 Novembre 2026</p>
                         </div>
                     </div>
-                    <div>
-                        <i></i>
-                        <div>
+                    <div class="info-card">
+                        <i class="bi bi-geo-alt"></i>
+                        <div class="info-body">
                             <h3>Lieu de l'événement</h3>
                             <p>Centre de conférence, Dakar, Sénégal</p>
                         </div>
                     </div>
-                    <div>
-                        <i></i>
-                        <div>
+                    <div class="info-card">
+                        <i class="bi bi-envelope"></i>
+                        <div class="info-body">
                             <h3>Contactez-Nous</h3>
                             <p>contact@africonnectsummit</p>
                         </div>
                     </div>
-                    <div>
-                        <i></i>
-                        <div>
+                    <div class="info-card">
+                        <i class="bi bi-telephone"></i>
+                        <div class="info-body">
                             <h3>Infoline</h3>
                             <p>+221 33 800 00 00</p>
                         </div>
@@ -153,62 +153,62 @@
             </div>
         </section>
         <!-- section FAQ en accordéon -->
-         <section>
-            <div>
-                <h2>Foire Aux Questions (FAQ) </h2>
-                <div>
+         <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Foire Aux Questions (FAQ) </h2>
+                <div class="faq-accordion">
                     <!-- Question1 -->
-                     <div>
-                        <input type="checkbox" id="faq1">
-                        <label for="faq1">
+                     <div class="faq-item">
+                        <input type="checkbox" id="faq1" class="faq-toggle">
+                        <label for="faq1" class="faq-label">
                             L'événement est-il accessible en ligne ?
-                            <i></i>
+                            <i class="bi bi-chevron-down"></i>
                         </label>
-                        <div>
+                        <div class="faq-content">
                             <p>Oui, tout les conférences de l'Amphithéâtre Kélifa seront diffusées en direct pour les inscrits "En ligne"</p>
                         </div>
                      </div>
                      <!-- Question2 -->
-                      <div>
-                        <input type="checkbox" id="faq2">
-                        <label for="faq2">
+                      <div class="faq-item">
+                        <input type="checkbox" id="faq2" class="faq-toggle">
+                        <label for="faq2" class="faq-label">
                             Comment puis-je recupérer mon badge ?
-                            <i></i>
+                            <i class="bi bi-chevron-down"></i>
                         </label>
-                        <div>
+                        <div class="faq-content">
                             <p>Les badges pourront être récupérés à l'acceuil du Centre de Conférence dés le 14 Novembre sur présentation de votre confirmation.</p>
                         </div>
                      </div>
                      <!-- Question3 -->
-                     <div>
-                        <input type="checkbox" id="faq3">
-                        <label for="faq3">
+                     <div class="faq-item">
+                        <input type="checkbox" id="faq3" class="faq-toggle">
+                        <label for="faq3" class="faq-label">
                             Y a-t-il des tarifs réduits pour les étudiants  ?
-                            <i></i>
+                            <i class="bi bi-chevron-down"></i>
                         </label>
-                        <div>
+                        <div class="faq-content">
                             <p>Tout à fait ! En sélectionnant "Etudiant" et en présentant justificatif valide, vous bénéficiez de 50% de réduction.</p>
                         </div>
                      </div>
                      <!-- Question4 -->
-                     <div>
-                        <input type="checkbox" id="faq4">
-                        <label for="faq4">
+                     <div class="faq-item">
+                        <input type="checkbox" id="faq4" class="faq-label">
+                        <label for="faq4" class="faq-label">
                             Puis-je modifier ma participation plus tard ?
-                            <i></i>
+                            <i class="bi bi-chevron-down"></i>
                         </label>
-                        <div>
+                        <div class="faq-content">
                             <p>Oui, Vous pouvez modifier vos informations en envoyant un email au support avant le 1er novembre 2026.</p>
                         </div>
                      </div>
                      <!-- Question5 -->
-                     <div>
-                        <input type="checkbox" id="faq5">
-                        <label for="faq5">
+                     <div class="faq-item">
+                        <input type="checkbox" id="faq5" class="faq-toggle">
+                        <label for="faq5" class="faq-label">
                              les repas sont -ils compris dans l'inscription?
-                            <i></i>
+                            <i class="bi bi-chevron-down"></i>
                         </label>
-                        <div>
+                        <div class="faq-content">
                             <p>Les pauses café et déjeuners sont inclus por les badges VIP et Standard.</p>
                         </div>
                      </div>
@@ -216,10 +216,10 @@
             </div>
          </section>
          <!-- carte google maps -->
-          <section>
-            <div>
-                <h2>Où nous trouver ?</h2>
-                <div>
+          <section class="maps-section">
+            <div class="container">
+                <h2 class="section-title">Où nous trouver ?</h2>
+                <div class="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.548261954973!2d-17.4476798250743!3d14.681559085814467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec17317da2aeaaf%3A0xe0250c32b6f58c18!2sVille%20de%20Dakar!5e0!3m2!1sfr!2ssn!4v1784126316068!5m2!1sfr!2ssn"  width="800" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
 
                     </iframe>
@@ -228,26 +228,26 @@
           </section>
     </main>
 
-    <footer>
-        <div>
-            <div>
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
                 <h3>AfriConnect Summit</h3>
                 <p>La vitrine technologique majeure de l'année 2026.</p>
             </div>
-            <div>
+            <div class="footer-socials ">
                 <h3>Média sociaux</h3>
-                <div>
-                    <a href="#" aria-label="X (Twitter)"><i></i></a>
-                    <a href="#" aria-label="Linkedin"><i></i></a>
-                    <a href="#" aria-label="Instagram"><i></i></a>
+                <div class="social-icons">
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
-            <div>
+            <div class="footer-nav">
                 <h3>Navigation Rapide</h3>
-                <a href="#"><i></i>Retour en haut</a>
+                <a href="#" class="back-to-top"><i class="bi-arrow-up-short"></i>Retour en haut</a>
             </div>
         </div>
-        <div>
+        <div class="footer-bottom">
             <p>&copy;<span></span>AfriConnect Summit. Tout droits réservés.</p>
         </div>
     </footer>
